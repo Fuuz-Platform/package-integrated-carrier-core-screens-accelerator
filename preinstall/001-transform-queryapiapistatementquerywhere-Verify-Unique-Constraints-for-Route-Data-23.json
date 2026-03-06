@@ -1,0 +1,96 @@
+{
+  "action": {
+    "transform": "$query({\"api\":$api,\"statement\":'query($where:' & $type & 'WhereInput!){data:' & $lowerFirst($type) & '(where:$where){total}}',\"variables\":{\"where\":{\"_or\":[$fields.{$:{\"_in\":[$lookup($$,$)]}}]}}}).data.total ? $throw(\"Could not verify unique fields for \" & $type & \" records.\")",
+    "bindings": {
+      "api": "application",
+      "type": "Route",
+      "fields": [
+        "id",
+        "path"
+      ]
+    }
+  },
+  "payload": [
+    {
+      "id": "ckmwjt35d006c0i6g9y2t7v9r",
+      "path": "/materialsManagement/logistics/integratedCarriers"
+    },
+    {
+      "id": "ckmwjvapy00200i71cdd9f5sk",
+      "path": "/materialsManagement/logistics/integratedCarrierRequestFlows/:id"
+    },
+    {
+      "id": "ckmwjvb5u00700i6g7x6la8s2",
+      "path": "/materialsManagement/logistics/integratedCarrierAccounts/:id"
+    },
+    {
+      "id": "ckmwjvb7600710i6gdyyregbl",
+      "path": "/materialsManagement/logistics/integratedCarrierServices/:id"
+    },
+    {
+      "id": "ckmwjvc9t00210i710ayga0a8",
+      "path": "/materialsManagement/logistics/integratedCarrierRequestFlows"
+    },
+    {
+      "id": "ckmwjvcbq00220i71g64c53sk",
+      "path": "/materialsManagement/logistics/integratedCarrierRequestTypes"
+    },
+    {
+      "id": "ckmwjvcmf00230i71gai11g9n",
+      "path": "/materialsManagement/logistics/integratedCarrierAccounts"
+    },
+    {
+      "id": "ckmwjvcz000730i6g8k2y6kxp",
+      "path": "/materialsManagement/logistics/integratedCarrierRequestTypes/:id"
+    },
+    {
+      "id": "ckmwjvd0800740i6g9bq94u75",
+      "path": "/materialsManagement/logistics/integratedCarrierBillingTypes"
+    },
+    {
+      "id": "ckmwjvd3500240i71dcbr6nae",
+      "path": "/materialsManagement/logistics/integratedCarrierServices"
+    },
+    {
+      "id": "ckmwjvd9r00250i714q7k3fom",
+      "path": "/materialsManagement/logistics/integratedCarrierBillingTypes/:id"
+    },
+    {
+      "id": "ckmwjvezs00270i71hslt8mzo",
+      "path": "/materialsManagement/logistics/integratedCarriers/:id"
+    },
+    {
+      "id": "ckmxvocio00080i5ogr6s7rc5",
+      "path": "/materialsManagement/logistics/integratedCarrierConnectionConfigurations/:id"
+    },
+    {
+      "id": "ckmxvofdu000h0i2z8al04t41",
+      "path": "/materialsManagement/logistics/integratedCarrierConnectionConfigurations"
+    },
+    {
+      "id": "ckn4zfz3d001m0j398cgag541",
+      "path": "/materialsManagement/logistics/integratedCarrierRequests/:id"
+    },
+    {
+      "id": "ckn4zfzfq00290i5ebjffhx0d",
+      "path": "/materialsManagement/logistics/integratedCarrierRequestStatuses/:id"
+    },
+    {
+      "id": "ckn4zg26f002b0i5e4ui9aw5v",
+      "path": "/materialsManagement/logistics/integratedCarrierRequests"
+    },
+    {
+      "id": "ckn4zg28100090i4u9ronept2",
+      "path": "/materialsManagement/logistics/integratedCarrierRequestStatuses"
+    },
+    {
+      "id": "ckn6d70d800670i5e37bv44sk",
+      "path": "/materialsManagement/logistics/integratedCarrierShipments"
+    },
+    {
+      "id": "ckn6d70yp004d0j39degfbrk9",
+      "path": "/materialsManagement/logistics/integratedCarrierShipments/:id"
+    }
+  ],
+  "description": "Verify Unique Constraints for Route Data (2/3)"
+}

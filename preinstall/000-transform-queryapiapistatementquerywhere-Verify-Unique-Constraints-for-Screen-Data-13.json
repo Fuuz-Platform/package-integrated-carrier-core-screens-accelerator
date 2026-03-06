@@ -1,0 +1,96 @@
+{
+  "action": {
+    "transform": "$query({\"api\":$api,\"statement\":'query($where:' & $type & 'WhereInput!){data:' & $lowerFirst($type) & '(where:$where){total}}',\"variables\":{\"where\":{\"_or\":[$fields.{$:{\"_in\":[$lookup($$,$)]}}]}}}).data.total ? $throw(\"Could not verify unique fields for \" & $type & \" records.\")",
+    "bindings": {
+      "api": "application",
+      "type": "Screen",
+      "fields": [
+        "id",
+        "name"
+      ]
+    }
+  },
+  "payload": [
+    {
+      "id": "ckmwjt2us001n0i718ybzgwom",
+      "name": "IntegratedCarrier Table"
+    },
+    {
+      "id": "ckmwjv2k8006d0i6g09obbrg0",
+      "name": "IntegratedCarrierRequestFlow Form"
+    },
+    {
+      "id": "ckmwjv2zx006e0i6g0wx1elet",
+      "name": "IntegratedCarrierAccount Form"
+    },
+    {
+      "id": "ckmwjv341006f0i6g4l5u16v3",
+      "name": "IntegratedCarrierService Form"
+    },
+    {
+      "id": "ckmwjv455006g0i6g1kij9qzz",
+      "name": "IntegratedCarrierRequestFlow Table"
+    },
+    {
+      "id": "ckmwjv46k001q0i71b47catyz",
+      "name": "IntegratedCarrierRequestType Table"
+    },
+    {
+      "id": "ckmwjv4du006h0i6gbslzaucc",
+      "name": "IntegratedCarrierAccount Table"
+    },
+    {
+      "id": "ckmwjv4od006i0i6g2t9v7tjc",
+      "name": "IntegratedCarrierRequestType Form"
+    },
+    {
+      "id": "ckmwjv4ps001r0i71d0xjc79n",
+      "name": "IntegratedCarrierBillingType Table"
+    },
+    {
+      "id": "ckmwjv4r4001s0i719bvuf05b",
+      "name": "IntegratedCarrierService Table"
+    },
+    {
+      "id": "ckmwjv50h001t0i712lu0grlz",
+      "name": "IntegratedCarrierBillingType Form"
+    },
+    {
+      "id": "ckmwjv7ke006k0i6g4oh174xu",
+      "name": "IntegratedCarrier Form"
+    },
+    {
+      "id": "ckmxvo0tr00090i3u42ouacls",
+      "name": "IntegratedCarrierConnectionConfiguration Form"
+    },
+    {
+      "id": "ckmxvo3bm000b0i2zdjhs5azp",
+      "name": "IntegratedCarrierConnectionConfiguration Table"
+    },
+    {
+      "id": "ckn4zfjki00210i5ebpqidj2i",
+      "name": "IntegratedCarrierRequestStatus Form"
+    },
+    {
+      "id": "ckn4zfjmb00020i4uclc432jc",
+      "name": "IntegratedCarrierRequest Form"
+    },
+    {
+      "id": "ckn4zfmjr00030i4ufro369le",
+      "name": "IntegratedCarrierRequest Table"
+    },
+    {
+      "id": "ckn4zfmlk00070i5dgbn10u9m",
+      "name": "IntegratedCarrierRequestStatus Table"
+    },
+    {
+      "id": "ckn6d6g57003m0j397s6v3ehx",
+      "name": "IntegratedCarrierShipment Table"
+    },
+    {
+      "id": "ckn6d6h58005s0i5eg50weo7r",
+      "name": "IntegratedCarrierShipment Form"
+    }
+  ],
+  "description": "Verify Unique Constraints for Screen Data (1/3)"
+}

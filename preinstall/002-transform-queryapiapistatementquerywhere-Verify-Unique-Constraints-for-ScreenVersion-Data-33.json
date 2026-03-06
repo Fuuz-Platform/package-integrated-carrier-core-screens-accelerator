@@ -1,0 +1,75 @@
+{
+  "action": {
+    "transform": "$query({\"api\":$api,\"statement\":'query($where:' & $type & 'WhereInput!){data:' & $lowerFirst($type) & '(where:$where){total}}',\"variables\":{\"where\":{\"_or\":[$fields.{$:{\"_in\":[$lookup($$,$)]}}]}}}).data.total ? $throw(\"Could not verify unique fields for \" & $type & \" records.\")",
+    "bindings": {
+      "api": "application",
+      "type": "ScreenVersion",
+      "fields": [
+        "id"
+      ]
+    }
+  },
+  "payload": [
+    {
+      "id": "ckn6djyf700010i3916dcfxx9"
+    },
+    {
+      "id": "ckn6dkfgz00020i39d1h1fkqs"
+    },
+    {
+      "id": "cknjcfyqi00300j8r4sta26se"
+    },
+    {
+      "id": "cknjcgf97004s0i5j3xd0bsxy"
+    },
+    {
+      "id": "cknjfijt0006i0i5j10xv04g3"
+    },
+    {
+      "id": "cknjfjl79004i0j8rhphr0mga"
+    },
+    {
+      "id": "cknjfms5i006m0i5ja8q4aikt"
+    },
+    {
+      "id": "cknjfxja1004l0j8reul88ri5"
+    },
+    {
+      "id": "cknjfzha0006q0i5j7waihnh3"
+    },
+    {
+      "id": "cknjg0b9y004n0j8r2pcrat9k"
+    },
+    {
+      "id": "cknjg2d3h006r0i5j444ebtdn"
+    },
+    {
+      "id": "cknjg3q93004q0j8r805379j9"
+    },
+    {
+      "id": "cknjg4efh004r0j8r2vo48hpu"
+    },
+    {
+      "id": "cknjg94sl004t0j8r2g2o03zj"
+    },
+    {
+      "id": "cknjgan11004w0j8rcxw5hedk"
+    },
+    {
+      "id": "cknjgdy14006x0i5jb2vq1dtw"
+    },
+    {
+      "id": "cknjgfnn1006z0i5j4dg5hul4"
+    },
+    {
+      "id": "cknjghc5f00700i5j5to07bgw"
+    },
+    {
+      "id": "cknjgq05t00720i5j7z3gdi62"
+    },
+    {
+      "id": "cknjgrtzs00540j8r7bg9b4v7"
+    }
+  ],
+  "description": "Verify Unique Constraints for ScreenVersion Data (3/3)"
+}

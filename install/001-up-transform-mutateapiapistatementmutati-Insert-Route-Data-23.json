@@ -1,0 +1,201 @@
+{
+  "action": {
+    "up": {
+      "transform": "$mutate({\"api\":$api,\"statement\":'mutation($payload:[' & $type & 'CreatePayloadInput!]!){data:create' & $type & '(payload:$payload){id}}',\"variables\":{\"payload\":[$.{\"create\":$}]}}).data.id",
+      "bindings": {
+        "api": "application",
+        "type": "Route"
+      }
+    },
+    "down": {
+      "transform": "$mutate({\"api\":$api,\"statement\":'mutation($payload:[' & $type & 'DeletePayloadInput!]!){delete' & $type & '(payload:$payload){id}}',\"variables\":{\"payload\":[$.{\"where\":{\"id\":id}}]}})",
+      "bindings": {
+        "api": "application",
+        "type": "Route"
+      }
+    }
+  },
+  "payload": [
+    {
+      "id": "ckmwjt35d006c0i6g9y2t7v9r",
+      "title": "Integrated Carrier Setup",
+      "path": "/materialsManagement/logistics/integratedCarriers",
+      "moduleId": "logistics",
+      "screenId": "ckmwjt2us001n0i718ybzgwom",
+      "isMenuAccessible": true,
+      "submenu": ""
+    },
+    {
+      "id": "ckmwjvapy00200i71cdd9f5sk",
+      "title": "Integrated Carrier Request Flow",
+      "path": "/materialsManagement/logistics/integratedCarrierRequestFlows/:id",
+      "moduleId": "logistics",
+      "screenId": "ckmwjv2k8006d0i6g09obbrg0",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckmwjvb5u00700i6g7x6la8s2",
+      "title": "Integrated Carrier Account",
+      "path": "/materialsManagement/logistics/integratedCarrierAccounts/:id",
+      "moduleId": "logistics",
+      "screenId": "ckmwjv2zx006e0i6g0wx1elet",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckmwjvb7600710i6gdyyregbl",
+      "title": "Integrated Carrier Service",
+      "path": "/materialsManagement/logistics/integratedCarrierServices/:id",
+      "moduleId": "logistics",
+      "screenId": "ckmwjv341006f0i6g4l5u16v3",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckmwjvc9t00210i710ayga0a8",
+      "title": "Integrated Carrier Request Flows",
+      "path": "/materialsManagement/logistics/integratedCarrierRequestFlows",
+      "moduleId": "logistics",
+      "screenId": "ckmwjv455006g0i6g1kij9qzz",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckmwjvcbq00220i71g64c53sk",
+      "title": "Integrated Carrier Request Types",
+      "path": "/materialsManagement/logistics/integratedCarrierRequestTypes",
+      "moduleId": "logistics",
+      "screenId": "ckmwjv46k001q0i71b47catyz",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckmwjvcmf00230i71gai11g9n",
+      "title": "Integrated Carrier Accounts",
+      "path": "/materialsManagement/logistics/integratedCarrierAccounts",
+      "moduleId": "logistics",
+      "screenId": "ckmwjv4du006h0i6gbslzaucc",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckmwjvcz000730i6g8k2y6kxp",
+      "title": "Integrated Carrier Request Type",
+      "path": "/materialsManagement/logistics/integratedCarrierRequestTypes/:id",
+      "moduleId": "logistics",
+      "screenId": "ckmwjv4od006i0i6g2t9v7tjc",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckmwjvd0800740i6g9bq94u75",
+      "title": "Integrated Carrier Billing Types",
+      "path": "/materialsManagement/logistics/integratedCarrierBillingTypes",
+      "moduleId": "logistics",
+      "screenId": "ckmwjv4ps001r0i71d0xjc79n",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckmwjvd3500240i71dcbr6nae",
+      "title": "Integrated Carrier Services",
+      "path": "/materialsManagement/logistics/integratedCarrierServices",
+      "moduleId": "logistics",
+      "screenId": "ckmwjv4r4001s0i719bvuf05b",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckmwjvd9r00250i714q7k3fom",
+      "title": "Integrated Carrier Billing Type",
+      "path": "/materialsManagement/logistics/integratedCarrierBillingTypes/:id",
+      "moduleId": "logistics",
+      "screenId": "ckmwjv50h001t0i712lu0grlz",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckmwjvezs00270i71hslt8mzo",
+      "title": "Integrated Carrier",
+      "path": "/materialsManagement/logistics/integratedCarriers/:id",
+      "moduleId": "logistics",
+      "screenId": "ckmwjv7ke006k0i6g4oh174xu",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckmxvocio00080i5ogr6s7rc5",
+      "title": "Integrated Carrier Connection Configuration",
+      "path": "/materialsManagement/logistics/integratedCarrierConnectionConfigurations/:id",
+      "moduleId": "logistics",
+      "screenId": "ckmxvo0tr00090i3u42ouacls",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckmxvofdu000h0i2z8al04t41",
+      "title": "Integrated Carrier Connection Configurations",
+      "path": "/materialsManagement/logistics/integratedCarrierConnectionConfigurations",
+      "moduleId": "logistics",
+      "screenId": "ckmxvo3bm000b0i2zdjhs5azp",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckn4zfz3d001m0j398cgag541",
+      "title": "Integrated Carrier Request",
+      "path": "/materialsManagement/logistics/integratedCarrierRequests/:id",
+      "moduleId": "logistics",
+      "screenId": "ckn4zfjmb00020i4uclc432jc",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckn4zfzfq00290i5ebjffhx0d",
+      "title": "Integrated Carrier Request Status",
+      "path": "/materialsManagement/logistics/integratedCarrierRequestStatuses/:id",
+      "moduleId": "logistics",
+      "screenId": "ckn4zfjki00210i5ebpqidj2i",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckn4zg26f002b0i5e4ui9aw5v",
+      "title": "Integrated Carrier Requests",
+      "path": "/materialsManagement/logistics/integratedCarrierRequests",
+      "moduleId": "logistics",
+      "screenId": "ckn4zfmjr00030i4ufro369le",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckn4zg28100090i4u9ronept2",
+      "title": "Integrated Carrier Request Statuses",
+      "path": "/materialsManagement/logistics/integratedCarrierRequestStatuses",
+      "moduleId": "logistics",
+      "screenId": "ckn4zfmlk00070i5dgbn10u9m",
+      "isMenuAccessible": false,
+      "submenu": ""
+    },
+    {
+      "id": "ckn6d70d800670i5e37bv44sk",
+      "title": "Integrated Carrier Shipments",
+      "path": "/materialsManagement/logistics/integratedCarrierShipments",
+      "moduleId": "logistics",
+      "screenId": "ckn6d6g57003m0j397s6v3ehx",
+      "isMenuAccessible": true,
+      "submenu": ""
+    },
+    {
+      "id": "ckn6d70yp004d0j39degfbrk9",
+      "title": "Integrated Carrier Shipment",
+      "path": "/materialsManagement/logistics/integratedCarrierShipments/:id",
+      "moduleId": "logistics",
+      "screenId": "ckn6d6h58005s0i5eg50weo7r",
+      "isMenuAccessible": false,
+      "submenu": ""
+    }
+  ],
+  "description": "Insert Route Data (2/3)"
+}
