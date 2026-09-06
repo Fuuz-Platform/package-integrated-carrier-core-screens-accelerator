@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integrated Carrier Core Screens Package &mdash; Fuuz Accelerator</title>
+<meta name="description" content="Fuuz accelerator: Integrated carrier screens â€” shipment, carrier account, and carrier management UIs">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://accelerators.fuuz.com/package-integrated-carrier-core-screens-accelerator/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://accelerators.fuuz.com/package-integrated-carrier-core-screens-accelerator/">
+<meta property="og:site_name" content="Fuuz Accelerators">
+<meta property="og:title" content="Integrated Carrier Core Screens Package &mdash; Fuuz Accelerator">
+<meta property="og:description" content="Fuuz accelerator: Integrated carrier screens â€” shipment, carrier account, and carrier management UIs">
+<link rel="icon" href="assets/appicon-violet.svg">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="prose.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "Integrated Carrier Core Screens Package",
+  "url": "https://accelerators.fuuz.com/package-integrated-carrier-core-screens-accelerator/",
+  "description": "Fuuz accelerator: Integrated carrier screens \u00e2\u20ac\u201d shipment, carrier account, and carrier management UIs",
+  "codeRepository": "https://github.com/Fuuz-Platform/package-integrated-carrier-core-screens-accelerator",
+  "applicationCategory": "BusinessApplication",
+  "runtimePlatform": "Fuuz",
+  "author": {
+    "@type": "Organization",
+    "name": "Fuuz",
+    "url": "https://fuuz.com"
+  }
+}
+</script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="../"><img src="assets/logo-horizontal-on-midnight.svg" alt="Fuuz"></a>
+    <span class="section">Accelerators</span>
+    <nav><a href="#overview">Overview</a><a href="#package-contents">Package Contents</a><a href="#installed-screens-3">Installed Screens (3)</a><a href="https://github.com/Fuuz-Platform/package-integrated-carrier-core-screens-accelerator">GitHub</a></nav>
+  </div>
+</header>
+<main>
+<div class="wrap hero">
+  <p class="eyebrow">Accelerator &middot; Integration package</p>
+  <h1>Integrated Carrier Core Screens <span class="accent">Package</span></h1>
+  <p class="lede">Fuuz accelerator: Integrated carrier screens â€” shipment, carrier account, and carrier management UIs</p>
+  <div class="ctas">
+    <a class="cta cta-primary" href="https://github.com/Fuuz-Platform/package-integrated-carrier-core-screens-accelerator">Get the package</a>
+    <a class="cta cta-secondary" href="../">All accelerators</a>
+  </div>
+</div>
+<section>
+  <div class="wrap prose">
+<p><strong>Version:</strong> 0.0.1
+<strong>Spec Version:</strong> 2.0.0</p>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>This package installs the core user interface screens for the Integrated Carrier shipping system. It provides the carrier-agnostic shipping screens that work with any carrier registered in the system (FedEx, UPS, or future additions) through the <code>Integrated Carrier Router</code> dispatch flow.</p>
+<hr />
+<h2 id="package-contents">Package Contents</h2>
+<pre><code>integrated-carrier-core-screens/
+├── manifest.json
+├── package-data.json
+├── install/                     3 screens (install steps)
+└── preinstall/                  3 preinstall verification steps
+</code></pre>
+<hr />
+<h2 id="installed-screens-3">Installed Screens (3)</h2>
+<h3>Integrated Carrier Shipment Screen</h3>
+<p>The primary operator-facing shipping workflow screen. Provides:</p>
+<ul>
+<li><strong>Carrier selection</strong> — Dropdown populated from active <code>IntegratedCarrier</code> records</li>
+<li><strong>Service level selection</strong> — Filtered by selected carrier from <code>IntegratedCarrierService</code> records</li>
+<li><strong>Billing type selection</strong> — Filtered by selected carrier from <code>IntegratedCarrierBillingType</code> records</li>
+<li><strong>Shipment details form</strong> — Origin/destination address entry, package count, weight, dimensions</li>
+<li><strong>Rate quote</strong> — Triggers the <code>Integrated Carrier Router</code> with request type "Rate Quote"; displays returned carrier rates</li>
+<li><strong>Label generation</strong> — Triggers label generation for the selected service and rate; invokes <code>Integrated Carrier Print Labels Standard</code> upon success</li>
+<li><strong>Void label</strong> — Cancels a previously generated label via the router</li>
+<li><strong>Shipment history</strong> — Recent <code>IntegratedCarrierRequest</code> records for the current session</li>
+</ul>
+<h3>Carrier Account Configuration Screen</h3>
+<p>Administrative screen for managing carrier accounts:</p>
+<ul>
+<li>Create and edit <code>IntegratedCarrierAccount</code> records (account number, API credentials, test/production environment toggle)</li>
+<li>Link accounts to <code>IntegratedCarrierConnectionConfiguration</code> records</li>
+<li>Test connectivity to carrier API endpoints</li>
+<li>View connection status and last successful API call</li>
+</ul>
+<h3>Carrier Management Screen</h3>
+<p>Administrative screen for managing the carrier registry:</p>
+<ul>
+<li>List of registered <code>IntegratedCarrier</code> records with active/inactive status</li>
+<li><code>IntegratedCarrierService</code> management — add/edit available service levels per carrier</li>
+<li><code>IntegratedCarrierBillingType</code> management — configure billing options per carrier</li>
+<li><code>IntegratedCarrierRequestFlow</code> mapping — assign request handler flow IDs to each carrier/request-type combination</li>
+</ul>
+<hr />
+<h2 id="install-process">Install Process</h2>
+<p><strong>Preinstall (3 steps):</strong> Verifies that none of the 3 screen IDs already exist, preventing duplicate installations.</p>
+<p><strong>Install (3 steps):</strong> Creates each screen header and its latest version, then deploys to make it available in the Fuuz application.</p>
+<hr />
+<h2 id="installation">Installation</h2>
+<ol>
+<li>Install <code>package-integrated-carrier-core-schema-accelerator</code> and <code>package-integrated-carrier-core-flows-accelerator</code> first</li>
+<li>Import this package via Fuuz Package Manager</li>
+<li>Install carrier-specific packages (FedEx, UPS) to populate carrier/service/billing seed data</li>
+<li>Assign the Integrated Carrier Shipment Screen to relevant user roles via the Fuuz Role manager</li>
+<li>Add the screen to the navigation menu for shipping users</li>
+</ol>
+<hr />
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><strong><code>package-integrated-carrier-core-schema-accelerator</code></strong> — required</li>
+<li><strong><code>package-integrated-carrier-core-flows-accelerator</code></strong> — required (screens invoke the router flows)</li>
+<li>At least one carrier package (FedEx or UPS) for seed data to populate carrier dropdowns</li>
+</ul>
+<hr />
+<h2 id="part-of-the-integrated-carrier-suite">Part of the Integrated Carrier Suite</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>integrated-carrier-core-schema</code></td>
+<td>Data models</td>
+</tr>
+<tr>
+<td><code>integrated-carrier-core-flows</code></td>
+<td>Router and print flows</td>
+</tr>
+<tr>
+<td><strong>integrated-carrier-core-screens</strong> (this)</td>
+<td>Shipment management screens</td>
+</tr>
+<tr>
+<td><code>integrated-carrier-fedex</code></td>
+<td>FedEx seed data and label flows</td>
+</tr>
+<tr>
+<td><code>integrated-carrier-ups</code></td>
+<td>UPS seed data and label flows</td>
+</tr>
+<tr>
+<td><code>integrated-carrier-addon-plex</code></td>
+<td>Plex ERP integration extension</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<p><em>Built on the <a href="https://fuuz.com">Fuuz Industrial Operations Platform</a></em></p>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Fuuz&reg; is an Enterprise Industrial Intelligence Platform.
+      <a href="https://accelerators.fuuz.com/">All accelerators</a> &middot;
+      <a href="https://github.com/Fuuz-Platform/package-integrated-carrier-core-screens-accelerator">Source</a> &middot;
+      <a href="https://fuuz.com">fuuz.com</a></p>
+  </div>
+</footer>
+</body>
+</html>
